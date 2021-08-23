@@ -1,16 +1,15 @@
-import React, {useState} from 'react';
-import Sidebar from "./Sidebar";
+import React, {useState} from "react";
 import Task from "./Task";
-
+import Sidebar from "./Sidebar";
 
 const Content = () => {
-    let [selectedTab,setSelectedTab] = useState("INBOX");
+    const [selectedTab, setSelectedTab] = useState("INBOX");
     return (
-        <section className = "content">
-           <Sidebar selectedTab = {selectedTab} setSelectedTab = {setSelectedTab}/>
-           <Task />
+        <section className="content">
+            <Sidebar selectedTab={selectedTab} setSelectedTab={setSelectedTab}/>
+            <Task selectedTab={selectedTab}/>
         </section>
     );
-}
+};
 
 export default Content;
