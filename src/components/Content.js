@@ -7,8 +7,8 @@ const Content = () => {
     let [selectedTab,setSelectedTab] = useState("INBOX");
     return (
         <section className = "content">
-           <Task />
            <Sidebar selectedTab = {selectedTab} setSelectedTab = {setSelectedTab}/>
+           <Task />
         </section>
     );
 }
